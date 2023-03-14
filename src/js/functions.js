@@ -1,6 +1,8 @@
 import { format } from 'date-fns';
 import { captureDOM } from '../index.js';
 import { generateBulletinBoard } from './generate-page.js';
+require.context('../images/', false, /\.png$/)
+require.context('../images/', false, /\.png$/)
 
 // Modules
 const manageList = (function () {
@@ -284,7 +286,7 @@ const renderDOM = (function () {
             descriptionText.textContent = taskList.task;
 
             descriptionEditButton.classList.add('edit-button');
-            descriptionEditButton.setAttribute('src', '/src/images/edit-pencil.svg');
+            descriptionEditButton.setAttribute('src', 'edit-pencil.png');
 
             priorityList.classList.add('task-priority');
             prioritySelect.classList.add('task-priority-level');
@@ -304,10 +306,10 @@ const renderDOM = (function () {
             taskOptions.classList.add('task-options');
 
             taskEditButton.classList.add('task-edit-button', 'icon');
-            taskEditButton.setAttribute('src', '/src/images/edit-pencil.svg');
+            taskEditButton.setAttribute('src', 'edit-pencil.png');
 
             taskDeleteButton.classList.add('task-delete-button', 'icon');
-            taskDeleteButton.setAttribute('src', '/src/images/delete-x.svg');
+            taskDeleteButton.setAttribute('src', 'delete-x.png');
 
             // Adding Event Listeners
             // Click listener that allows the user to update description of the selected task
@@ -402,13 +404,13 @@ const renderDOM = (function () {
         middleSection.classList.toggle('tb-expanded-flex');
 
         backButton.classList.add('back-arrow');
-        backButton.setAttribute('src', '/src/images/back-arrow.svg');
+        backButton.setAttribute('src', 'back-arrow.png');
 
         newTitle.classList.add('todo-title');
         newTitle.textContent = manageList.bulletinBoard[index].title;
 
         titleEditButton.classList.add('icon', 'edit-button', 'title-edit-button');
-        titleEditButton.setAttribute('src', '/src/images/edit-pencil.svg');
+        titleEditButton.setAttribute('src', 'edit-pencil.png');
 
         creationDate.classList.add('todo-creation-date');
         creationDate.textContent = `Created ${pageFunctions.formatDate(manageList.bulletinBoard[index].creationDate)}`;
@@ -420,7 +422,7 @@ const renderDOM = (function () {
 
         dueDateEditButton.classList.add('edit-button', 'icon', 'due-date-edit-button');
         dueDateEditButton.setAttribute('type', 'date');
-        dueDateEditButton.setAttribute('src', '/src/images/edit-pencil.svg');
+        dueDateEditButton.setAttribute('src', 'edit-pencil.png');
 
         description.classList.add('todo-description', 'textarea');
         if (manageList.bulletinBoard[index].description.length === 0 || manageList.bulletinBoard[index].description === '') {
@@ -431,7 +433,7 @@ const renderDOM = (function () {
         }
 
         descriptionEditButton.classList.add('edit-button', 'icon');
-        descriptionEditButton.setAttribute('src', '/src/images/edit-pencil.svg');
+        descriptionEditButton.setAttribute('src', 'edit-pencil.png');
 
         listWrapper.classList.add('todo-list-wrapper');
 
@@ -439,7 +441,7 @@ const renderDOM = (function () {
 
         addTask.classList.add('add-task');
         addTaskButton.classList.add('add-task-button', 'icon', 'edit-button');
-        addTaskButton.setAttribute('src', '/src/images/add.svg');
+        addTaskButton.setAttribute('src', 'add.png');
 
         if (numOfLists !== 0) {
             for (let p = 0; p < numOfLists; p++) {
