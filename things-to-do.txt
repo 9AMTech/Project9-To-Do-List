@@ -1,0 +1,84 @@
+Things to Do 
+Last Updated : 5/3
+    Make sure Date FNS Library correctly inserts a formatted date.
+    Change the trashcan svg to be the "Date Made" section DONE
+    Show a pencil icon on hover next to most text boxes to allow users to edit them, like the date, title and description. DONE
+    If there's an empty description, put placeholder text in the description box of the expanded todo. DONE
+        -When they click away the list will save to the object DONE
+    Make sure priority dropdown button works
+        - when clicking a new option it updates the task objects priority
+    Make sure edit task button works DONE
+        - onClick allows user to type in the description box, when clicking away it updates the task object DONE
+    Make sure delete task button works DONE
+        - on click allows user to delete the task itself, removing it from the DOM, and updates task object DONE
+    Make sure add task button works DONE
+        - on click adds another task li and allows user to type in the description, DONE
+            if the user clicks away when its empty it will delete the li DONE
+    Make the website responsive (AT THE END)
+    Refactor code(Whenever possible)
+
+LOG
+4/29
+make sure the program works with already generated lists | DONE
+Add character limits 
+
+5/3
+Things Done
+    Program now works with already existing lists DONE
+        - can now add and delete interfering with existing lists DONE
+        - app checks for the biggest current ID if bulletinBoard has items DONE
+
+5/9
+Things Done
+    I'm in the process of adding nodes to change the trashbin SVG to the creation + due date DONE
+    I'm also adding the edit pencil svgs to allow users to edit stuff DONE
+    I'm thinking that I can refactor the functions to save lines of code, this part of the code is repeatable DONE
+    `````````````````````````````````````````````````````````````````````````````````````````````````````````
+    descriptionText.addEventListener('keypress' , function (event) {
+                pageFunctions.preventEnter(event);
+            });
+    
+            descriptionText.addEventListener('keyup' , function () {
+                manageList.bulletinBoard[listIndex].list[todoIndex].task = descriptionText.textContent;
+            });
+    
+            descriptionText.addEventListener('blur' , function () {
+                if(descriptionText.textContent.length === 0) {
+                    manageList.bulletinBoard[listIndex].list.splice(todoIndex, 1);
+                    list.removeChild(taskItem);
+                };
+            });
+    
+            taskEditButton.addEventListener('click', function () {
+                pageFunctions.edit(descriptionText);
+            });
+    `````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+
+5/24
+Things Done
+Title can be edited 
+Title + Description on Bulletin Board Todos now wraps nicely and cuts off when needed 
+The above has been refactored
+
+Things to Do
+The add button has been worked on, just has to prepend in the correct order now. DONE
+Then the project will be fully done function wise. All that'll be left is adding caps to the form inputs,
+and making the site responsive.
+The due date doesn't update properly. DONE
+    -The date it goes to is 1 day behind, weird. DONE
+
+The priorities have to update properly, currently it doesn't. DONE
+    -Also look into coloring them, maybe maybe not. 
+
+Make sure the task-id counter is updating properly, right now it's going off what looks like a .length value. DONE
+
+6/3
+Things to Do 
+1. Add character limits to the form inputs!!!!!! 
+2.  Look into Local Storage
+    a.  Set up Local Storage
+
+Things Done
+- Currently trying to set up local storage.
+- Don't worry about the check to see if local storage works.

@@ -1,0 +1,14 @@
+Project Description
+Create a project that is a todo app. 
+
+Project Requirements
+https://www.theodinproject.com/lessons/node-path-javascript-todo-list#assignment
+
+Module Descriptions
+index.js
+
+create-home-page.js
+
+create-list-page.js
+
+functions.js
