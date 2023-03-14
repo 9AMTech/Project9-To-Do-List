@@ -1,6 +1,9 @@
 import { format } from 'date-fns';
 import { captureDOM } from '../index.js';
 import { toolbarFunctions, manageList, pageFunctions, renderDOM } from './functions.js';
+require.context('../images/', false, /\.png$/)
+require.context('../images/', false, /\.png$/)
+
 
 
 // This module will hold all functions related to creating the bulletin boards (home page) DOM
@@ -13,8 +16,8 @@ const generateBulletinBoard = (function () {
         if (configuration === 'initial') {
 
             // Creating Elements
-            const toolbar = document.createElement('section');
             const leftSection = document.createElement('section');
+            const toolbar = document.createElement('section');
             const middleSection = document.createElement('section');
             const rightSection = document.createElement('section');
             const title = document.createElement('h1');
@@ -24,7 +27,7 @@ const generateBulletinBoard = (function () {
             // Manipulating Elements
             addListButtonWrapper.classList.add('add-todo-button-wrapper')
             addListButton.classList.add('add-todo-button');
-            addListButton.setAttribute('src', '/src/images/add.svg');
+            addListButton.setAttribute('src', 'add.png');
             toolbar.classList.add('toolbar');
             leftSection.classList.add('tb-left', 'tb-expanded-flex');
             middleSection.classList.add('tb-middle', 'tb-reduced-flex');
@@ -61,7 +64,7 @@ const generateBulletinBoard = (function () {
             title.textContent = 'Bulletin Board';
 
             addListButton.classList.add('add-todo-button');
-            addListButton.setAttribute('src', '/src/images/add.svg');
+            addListButton.setAttribute('src', 'add.png');
 
             // Adding event listeners
             // This hides and displays the form on the home
@@ -94,7 +97,7 @@ const generateBulletinBoard = (function () {
         notificationText.textContent += 'It appears you have no lists, click the button in the top right to get started!'
 
         notificationArrow.classList.add('notification-arrow');
-        notificationArrow.setAttribute('src', '/src/images/up-arrow.svg');
+        notificationArrow.setAttribute('src', 'up-arrow.png');
         notificationArrow.setAttribute('alt', 'An arrow pointing at the add-list button');
 
         // Appending Elements
@@ -144,7 +147,7 @@ const generateBulletinBoard = (function () {
             // List Delete Button
             deleteButton.dataset.id = manageList.bulletinBoard[index].id;
             deleteButton.classList.add('list-delete-button');
-            deleteButton.setAttribute('src', '/src/images/trashcan.svg');
+            deleteButton.setAttribute('src', 'trashcan.png');
 
 
             // Adding Event Listeners

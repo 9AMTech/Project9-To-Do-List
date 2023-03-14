@@ -1,5 +1,6 @@
 import { manageList, toolbarFunctions, pageFunctions } from './js/functions.js';
 import { generateBulletinBoard } from './js/generate-page.js'
+import './styles.css';
 
 const captureDOM = (function () {
 
