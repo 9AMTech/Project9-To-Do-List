@@ -2,7 +2,7 @@
 A todo list made with JS, CSS Animations, and Webpack!
 
 **Link to project:** https://9amtech.github.io/Project9-To-Do-List/ <br>
-**Project Requirements:** https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/restaurant-page#assignment
+**Project Requirements:** https://www.theodinproject.com/lessons/node-path-javascript-todo-list#assignment
 
 ![Thumbnail for the the todo-list project.](https://github.com/9AMTech/Project9-To-Do-List/blob/main/thumbnail.png?raw=true)
 
