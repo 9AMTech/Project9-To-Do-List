@@ -1,4 +1,4 @@
-# Project 8 - Restaurant Page
+# To-Do List
 A todo list made with JS, CSS Animations, and Webpack!
 
 **Link to project:** https://9amtech.github.io/Project9-To-Do-List/ <br>
